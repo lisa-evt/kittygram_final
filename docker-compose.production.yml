@@ -10,19 +10,19 @@ services:
     volumes:
       - pg_data:/var/lib/postgresql/data
   backend:
-    image: lisaevt/kittygram_backend/
+    image: lisaevt/kittygram_backend
     env_file: .env
     volumes:
       - static:/backend_static
       - media:/app/media
   frontend:
     env_file: .env
-    image: lisaevt/kittygram_frontend/
+    image: lisaevt/kittygram_frontend
     command: cp -r /app/build/. /frontend_static/
     volumes:
       - static:/frontend_static
   gateway:
-    image: lisaevt/kittygram_gateway/
+    image: lisaevt/kittygram_gateway
     env_file: .env
     depends_on:
       - backend
