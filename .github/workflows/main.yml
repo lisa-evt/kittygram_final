@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     services:
-      poatgres:
-        image: poatgres:13.10
+      postgres:
+        image: postgres:13.10
         env:
           POSTGRES_USER: django_user
           POSTGRES_PASSWORD: mysecretpassword
@@ -26,9 +26,8 @@ jobs:
 
     - name: Set up Python
       uses: actions/setup-python@v4
-
       with:
-        python-version: 3.12
+        python-version: '3.12'
 
     - name: Install dependencies
       run: |
