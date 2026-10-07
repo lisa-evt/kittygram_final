@@ -13,6 +13,9 @@ jobs:
       postgres:
         image: postgres:13.10
         env:
+          SECRET_KEY: test-secret-key-only-for-ci
+          DEBUG: 'False'
+          ALLOWED_HOSTS: localhost,127.0.0.1
           POSTGRES_USER: django_user
           POSTGRES_PASSWORD: mysecretpassword
           POSTGRES_DB: django_db
