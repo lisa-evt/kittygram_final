@@ -154,7 +154,3 @@ curl http://localhost:9000/api/achievements/ \
 curl -X POST http://localhost:9000/api/token/logout/ \
   -H "Authorization: Token 9a1b2c3d4e5f..."
 ```
-
-## Автор
-
-Лиза — [GitHub](https://github.com/<ВАШ_ЛОГИН_GITHUB>)
